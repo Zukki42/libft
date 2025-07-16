@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bavirgil <bavirgil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bavirgil <bavirgil@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/14 12:51:40 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/07/14 12:51:40 by bavirgil         ###   ########.fr       */
+/*   Created: 2025/07/16 13:24:05 by bavirgil          #+#    #+#             */
+/*   Updated: 2025/07/16 13:24:05 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <unistd.h>
+# include <stddef.h>
 # include <stdlib.h>
 
 /* Character check functions (return int) */
