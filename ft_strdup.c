@@ -1,46 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bavirgil <bavirgil@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/16 19:13:34 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/07/17 22:12:00 by bavirgil         ###   ########.fr       */
+/*   Created: 2025/07/18 14:51:56 by bavirgil          #+#    #+#             */
+/*   Updated: 2025/07/18 15:55:46 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 // #include <stdio.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_strdup(const char *s1)
 {
-	unsigned char		*d;
-	const unsigned char	*s;
+	size_t	len;
+	char	*s2;
 
-	if (!dst && !src)
+	len = ft_strlen(s1);
+	s2 = ft_calloc(len + 1, sizeof(char));
+	if (!s2)
 		return (NULL);
-	d = dst;
-	s = src;
-	while (n--)
-	{
-		*d = *s;
-		d++;
-		s++;
-	}
-	return (dst);
+	ft_memcpy(s2, s1, len);
+	return (s2);
 }
-
-// int main(void)
+// int	main(void)
 // {
-//     char src[] = "Hello, ligma!";
-//     char dest[15];
-
-// 	ft_memcpy(dest, src, 15);
-
-//     printf("Source: %s\n", src);
-//     printf("Destination: %s\n", dest);
-
-//     return (0);
+// 	char *str = ft_strdup("Hello");
+// 	printf("%s\n", str);
+// 	free(str);
+// 	return (0);
 // }

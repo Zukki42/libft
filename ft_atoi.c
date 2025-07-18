@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bavirgil <bavirgil@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/16 19:13:34 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/07/17 22:12:00 by bavirgil         ###   ########.fr       */
+/*   Created: 2025/07/17 22:13:17 by bavirgil          #+#    #+#             */
+/*   Updated: 2025/07/17 22:35:50 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,34 @@
 
 // #include <stdio.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int	ft_atoi(char *str)
 {
-	unsigned char		*d;
-	const unsigned char	*s;
+	int	i;
+	int	sign;
+	int	result;
 
-	if (!dst && !src)
-		return (NULL);
-	d = dst;
-	s = src;
-	while (n--)
+	i = 0;
+	sign = 1;
+	result = 0;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
 	{
-		*d = *s;
-		d++;
-		s++;
+		if (str[i] == '-')
+			sign *= -1;
+		i++;
 	}
-	return (dst);
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		result = (result * 10) + (str[i] - '0');
+		i++;
+	}
+	return (result * sign);
 }
 
-// int main(void)
+// int main()
 // {
-//     char src[] = "Hello, ligma!";
-//     char dest[15];
-
-// 	ft_memcpy(dest, src, 15);
-
-//     printf("Source: %s\n", src);
-//     printf("Destination: %s\n", dest);
-
-//     return (0);
+// 	char str[] = "   ---123-+-abc123";
+// 	printf("%d\n", ft_atoi(str));
+// 	return (0);
 // }

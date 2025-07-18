@@ -6,7 +6,7 @@
 #    By: bavirgil <bavirgil@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/16 13:24:21 by bavirgil          #+#    #+#              #
-#    Updated: 2025/07/16 19:44:11 by bavirgil         ###   ########.fr        #
+#    Updated: 2025/07/18 19:39:48 by bavirgil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CFLAGS = -Wall -Wextra -Werror
 NAME = libft.a
 
 # Source files
-SRCS = ft_isallnum.c \
+SRCS = ft_isalnum.c \
 		ft_isalpha.c \
 		ft_isascii.c \
 		ft_isdigit.c \
@@ -30,6 +30,15 @@ SRCS = ft_isallnum.c \
 		ft_bzero.c \
 		ft_memset.c \
 		ft_memcpy.c \
+		ft_memmove.c \
+		ft_atoi.c \
+		ft_strlcpy.c \
+		ft_strchr.c \
+		ft_strrchr.c \
+		ft_calloc.c \
+		ft_strdup.c \
+		ft_memchr.c \
+		ft_memcmp.c \
 
 # Object files
 OBJS = $(SRCS:.c=.o)

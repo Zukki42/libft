@@ -1,46 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bavirgil <bavirgil@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/16 19:13:34 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/07/17 22:12:00 by bavirgil         ###   ########.fr       */
+/*   Created: 2025/07/18 14:34:49 by bavirgil          #+#    #+#             */
+/*   Updated: 2025/07/18 14:50:30 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-// #include <stdio.h>
-
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned char		*d;
-	const unsigned char	*s;
+	void	*ptr;
 
-	if (!dst && !src)
+	ptr = malloc(count * size);
+
+	if (!ptr)
 		return (NULL);
-	d = dst;
-	s = src;
-	while (n--)
-	{
-		*d = *s;
-		d++;
-		s++;
-	}
-	return (dst);
+
+	ft_memset(ptr, 0, count * size);
+
+	return (ptr);
 }
-
-// int main(void)
+// int main()
 // {
-//     char src[] = "Hello, ligma!";
-//     char dest[15];
+//     int *arr = (int *)ft_calloc(5, sizeof(int));
 
-// 	ft_memcpy(dest, src, 15);
+//     for (int i = 0; i < 5; i++)
+//         printf("arr[%d]: %d\n", i, arr[i]);
 
-//     printf("Source: %s\n", src);
-//     printf("Destination: %s\n", dest);
-
-//     return (0);
+//     free(arr);
+//     return 0;
 // }
