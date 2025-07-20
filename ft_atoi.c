@@ -6,7 +6,7 @@
 /*   By: bavirgil <bavirgil@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 22:13:17 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/07/17 22:35:50 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/07/20 16:54:34 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 // #include <stdio.h>
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	sign;

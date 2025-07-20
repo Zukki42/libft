@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bavirgil <bavirgil@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 14:34:49 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/07/20 16:09:25 by bavirgil         ###   ########.fr       */
+/*   Created: 2025/07/20 16:55:44 by bavirgil          #+#    #+#             */
+/*   Updated: 2025/07/20 19:19:03 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
 
-void	*ft_calloc(size_t count, size_t size)
+char	*ft_strnstr(const char *hay, const char *ndl, size_t len)
 {
-	void	*ptr;
+	size_t	i;
+	size_t	j;
 
-	ptr = malloc(count * size);
-	if (!ptr)
-		return (NULL);
-	ft_memset(ptr, 0, count * size);
-	return (ptr);
+	if (*ndl == '\0')
+		return ((char *)hay);
+	i = 0;
+	while (hay[i] && i < len)
+	{
+		if (hay[i] == ndl[0])
+		{
+			j = 0;
+			while (ndl[j] && hay[i + j] == ndl[j] && (i + j) < len)
+				j++;
+			if (ndl[j] == '\0')
+				return ((char *)&hay[i]);
+		}
+		i++;
+	}
+	return (NULL);
 }
-// int main()
-// {
-//     int *arr = (int *)ft_calloc(5, sizeof(int));
-
-//     for (int i = 0; i < 5; i++)
-//         printf("arr[%d]: %d\n", i, arr[i]);
-
-//     free(arr);
-//     return 0;
-// }

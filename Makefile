@@ -6,7 +6,7 @@
 #    By: bavirgil <bavirgil@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/16 13:24:21 by bavirgil          #+#    #+#              #
-#    Updated: 2025/07/18 19:39:48 by bavirgil         ###   ########.fr        #
+#    Updated: 2025/07/20 16:57:27 by bavirgil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,6 +39,8 @@ SRCS = ft_isalnum.c \
 		ft_strdup.c \
 		ft_memchr.c \
 		ft_memcmp.c \
+		ft_strnstr.c \
+		
 
 # Object files
 OBJS = $(SRCS:.c=.o)
