@@ -6,12 +6,11 @@
 /*   By: bavirgil <bavirgil@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 13:08:47 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/07/18 13:30:03 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/07/21 15:29:35 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

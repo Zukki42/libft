@@ -6,13 +6,11 @@
 /*   By: bavirgil <bavirgil@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/16 18:55:48 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/07/16 19:08:58 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/07/21 15:30:45 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// #include <stdio.h>
 
 void	ft_bzero(void *s, size_t n)
 {

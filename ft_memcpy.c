@@ -6,13 +6,11 @@
 /*   By: bavirgil <bavirgil@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/16 19:13:34 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/07/17 22:12:00 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/07/21 15:30:17 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// #include <stdio.h>
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

@@ -6,13 +6,11 @@
 /*   By: bavirgil <bavirgil@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 22:13:17 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/07/20 16:54:34 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/07/21 15:30:48 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// #include <stdio.h>
 
 int	ft_atoi(const char *str)
 {

@@ -6,7 +6,7 @@
 #    By: bavirgil <bavirgil@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/16 13:24:21 by bavirgil          #+#    #+#              #
-#    Updated: 2025/07/21 15:21:38 by bavirgil         ###   ########.fr        #
+#    Updated: 2025/07/21 15:51:03 by bavirgil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,7 @@ SRCS = ft_isalnum.c \
 		ft_putendl_fd.c \
 		ft_putstr_fd.c \
 		ft_putchar_fd.c \
+		ft_striteri.c \
 		
 
 # Object files
