@@ -6,7 +6,7 @@
 /*   By: bavirgil <bavirgil@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 13:32:57 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/07/20 19:28:41 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/07/21 12:56:37 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s);
 		s++;
 	}
-	if ((char)c == '\0')
+	if (c == '\0')
 		return ((char *)s);
 	return (0);
 }
