@@ -6,7 +6,7 @@
 /*   By: bavirgil <bavirgil@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 13:32:57 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/07/21 15:29:58 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/07/23 14:33:49 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s);
 		s++;
 	}
-	if (c == '\0')
+	if ((char)c == '\0')
 		return ((char *)s);
 	return (0);
 }
@@ -29,7 +29,6 @@ char	*ft_strchr(const char *s, int c)
 // {
 // 	char str[] = "And I wonder , if you know , what it means!";
 // 	char ch = 's';
-
 // 	char *result = ft_strchr(str, ch);
 // 	if (result)
 // 	{
@@ -39,6 +38,5 @@ char	*ft_strchr(const char *s, int c)
 // 	{
 // 		printf("Character '%c' not found!\n", ch);
 // 	}
-
 // 	return (0);
 // }

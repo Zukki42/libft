@@ -6,7 +6,7 @@
 #    By: bavirgil <bavirgil@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/16 13:24:21 by bavirgil          #+#    #+#              #
-#    Updated: 2025/07/21 15:51:03 by bavirgil         ###   ########.fr        #
+#    Updated: 2025/07/23 21:04:36 by bavirgil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,8 +45,14 @@ SRCS = ft_isalnum.c \
 		ft_putstr_fd.c \
 		ft_putchar_fd.c \
 		ft_striteri.c \
+		ft_strtrim.c \
+		ft_strjoin.c\
+		ft_split.c\
+		ft_substr.c \
+		ft_itoa.c \
+		ft_strmapi.c \
+# make the last 2 at home for tonight :> 
 		
-
 # Object files
 OBJS = $(SRCS:.c=.o)
 
@@ -71,3 +77,5 @@ fclean: clean
 
 # Rebuild everything
 re: fclean all
+
+.PHONY: all clean fclean re bonus
