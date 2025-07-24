@@ -43,6 +43,8 @@ char	*ft_strnstr(const char *hay, const char *ndl, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	**ft_split(char const *s, char c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_itoa(int n);
 /* Character check functions (return int) */
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
