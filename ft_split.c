@@ -3,14 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bavirgil <bavirgil@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: bavirgil <bavirgil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 16:55:50 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/07/23 18:53:59 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/10/15 17:58:10 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// ft_split — splits a string into an array of strings using a delimiter :D
+// Takes a string 's' and a delimiter character 'c'.
+// Returns a NULL-terminated array of strings (each word gets its own malloc).
+// If memory allocation fails at any point,it cleans up nicely and returns NULL.
+// Perfect for breaking up sentences, CSV lines,or your sanity after debugging :D
 
 static int	count_words(char const *s, char c)
 {
@@ -76,3 +82,25 @@ char	**ft_split(char const *s, char c)
 	arr = fill_split(arr, s, c, wc);
 	return (arr);
 }
+
+// Example usage
+// Compile with: cc ft_split.c ft_strlcpy.c -o test && ./test
+// Splits a string by spaces and prints each resulting word :D
+// int	main(void)
+// {
+// 	char	**result;
+// 	int		i = 0;
+//
+// 	result = ft_split("split this sentence please", ' ');
+// 	if (!result)
+// 		return (1);
+//
+// 	while (result[i])
+// 	{
+// 		printf("Word %d: %s\n", i + 1, result[i]);
+// 		free(result[i]);
+// 		i++;
+// 	}
+// 	free(result);
+// 	return (0);
+// }

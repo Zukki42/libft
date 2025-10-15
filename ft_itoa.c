@@ -2,15 +2,24 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: bavirgil <bavirgil@student.42heilbronn.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
+/*                                                    +:+ +:+        
+	+:+     */
+/*   By: bavirgil <bavirgil@student.42heilbronn.    +#+  +:+      
+	+#+        */
+/*                                                +#+#+#+#+#+  
+	+#+           */
 /*   Created: 2025/07/24 16:47:24 by bavirgil          #+#    #+#             */
 /*   Updated: 2025/07/24 16:47:24 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// ft_itoa — turns an integer into a string :D
+// Takes an int 'n' and returns a freshly allocated string representing it.
+// Handles negatives, zero, and positive numbers like a champ.
+// Think of it as itoa = “integer to ASCII” (because C loves cryptic names).
+// Don’t forget to free the result later — malloc never forgets :D
 
 static int	count_len(int n)
 {
@@ -61,3 +70,16 @@ char	*ft_itoa(int n)
 		return (NULL);
 	return (fill_str(str, n, len));
 }
+
+// Example usage
+// Compile with: cc ft_itoa.c -o test && ./test
+// Converts different ints into strings and prints them out :D
+// int	main(void)
+// {
+// 	printf("%s\n", ft_itoa(0));
+// 	printf("%s\n", ft_itoa(42));
+// 	printf("%s\n", ft_itoa(-42));
+// 	printf("%s\n", ft_itoa(2147483647));
+// 	printf("%s\n", ft_itoa(-2147483648));
+// 	return (0);
+// }

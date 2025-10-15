@@ -3,14 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bavirgil <bavirgil@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: bavirgil <bavirgil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 22:13:17 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/07/21 15:30:48 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/10/15 17:33:45 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// ft_atoi — turns a string into an int (like a magic trick but with math :D)
+// Steps:
+// 1) Skip all spaces and weird whitespace (ASCII 9–13, you know the gang).
+// 2) Check if there’s a '+' or '-' sign — minus means grumpy (negative).
+// 3) Read digits until something non-digit crashes the party.
+// 4) Multiply result by sign and boom, you’ve got an int!
+// Note: No overflow check because we live dangerously :D
 
 int	ft_atoi(const char *str)
 {
@@ -37,9 +45,14 @@ int	ft_atoi(const char *str)
 	return (result * sign);
 }
 
-// int main()
-// {
-// 	char str[] = "   ---123-+-abc123";
-// 	printf("%d\n", ft_atoi(str));
-// 	return (0);
-// }
+// Tiny test zone :D
+// Compile with: cc ft_atoi.c -o test && ./test
+//#include <stdio.h>
+//
+//int	main(void)
+//{
+//	char	str[] = "   ---123-+-abc123";
+//
+//	printf("%d\n", ft_atoi(str));
+//	return (0);
+//}

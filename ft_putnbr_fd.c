@@ -3,14 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bavirgil <bavirgil@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: bavirgil <bavirgil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 12:43:04 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/07/21 15:30:03 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/10/15 17:57:15 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// ft_putnbr_fd — writes an integer to a given file descriptor :D
+// Handles negative numbers, zero,and even the edge case of INT_MIN (-2147483648).
+// Uses recursion to print each digit from most significant to least.
+// Perfect for sending numbers to stdout, stderr,or a file — wherever you please :D
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -38,11 +43,12 @@ void	ft_putnbr_fd(int n, int fd)
 	write(fd, &c, 1);
 }
 
+// Example usage
+// Compile with: cc ft_putnbr_fd.c -o test && ./test
+// Prints an integer to standard output :D
 // int main(void)
 // {
 //     int n = 12;
-
 //     ft_putnbr_fd(n, 1);
-
-//     return 0;
+//     return (0);
 // }

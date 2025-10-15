@@ -3,14 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bavirgil <bavirgil@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: bavirgil <bavirgil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/16 15:16:04 by bavirgil          #+#    #+#             */
-/*   Updated: 2025/07/21 15:29:40 by bavirgil         ###   ########.fr       */
+/*   Updated: 2025/10/15 18:00:01 by bavirgil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// ft_strlcat — appends one string to another, safely :D
+// Concatenates 'src' to the end of 'dst',but never writes more than 'dstsize' bytes.
+// Always null-terminates the result (unless dstsize = 0).
+// Returns the total length of the string it tried to create — useful for buffer size checks.
+// Basically strcat, but smarter and way less dangerous :D
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -36,13 +42,16 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	return (dst_len + src_len);
 }
 
+// Example usage
+// Compile with: cc ft_strlcat.c -o test && ./test
+// Appends one string to another safely and prints the result :D
 // int	main(void)
 // {
 // 	char	dst[20] = "Hell, I love ";
 // 	char	src[] = "EVoS (THEY ARE NOT MID!)";
 // 	size_t	dstsize;
 // 	size_t	result;
-
+//
 // 	dstsize = 46;
 // 	printf("Before ft_strlcat, dst: %s\n", dst);
 // 	result = ft_strlcat(dst, src, dstsize);
