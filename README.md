@@ -27,9 +27,9 @@ make
 
 Other useful commands:
 
-make clean     # remove object files
-make fclean    # remove object files and the library
-make re        # rebuild everything from scratch
+- make clean     # remove object files
+- make fclean    # remove object files and the library
+- make re        # rebuild everything from scratch
 
 ## 🖋️ Author
 
